@@ -15,7 +15,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  */
 @ComponentScan(basePackages={"com.james.zs.web.controller",
                              "com.james.zs.rest.controller",
-                             "com.james.framework.exception",
+                             "com.james.zk.exception",
                              "com.james.zs.config"}) // 扫描com.dahan包下所有spring相关组件
 @SpringBootApplication // 加载Spring Boot组件
 @EnableScheduling // 计划任务执行

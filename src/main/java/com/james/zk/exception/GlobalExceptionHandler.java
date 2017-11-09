@@ -1,4 +1,4 @@
-package com.james.framework.exception;
+package com.james.zk.exception;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

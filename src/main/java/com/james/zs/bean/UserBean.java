@@ -42,4 +42,5 @@ public class UserBean implements Serializable {
     public void setAge(int age) {
         this.age = age;
     }
+
 }

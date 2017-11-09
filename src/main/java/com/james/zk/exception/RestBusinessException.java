@@ -1,4 +1,4 @@
-package com.james.framework.exception;
+package com.james.zk.exception;
 
 /**
  * 业务异常

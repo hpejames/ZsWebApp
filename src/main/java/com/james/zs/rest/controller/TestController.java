@@ -27,11 +27,11 @@ public class TestController {
     }
 
 
-    @RequestMapping(value="/exceptionForJson",produces="text/plain")
-    public String exceptionForJson () {
+    @RequestMapping(value="/exceptionForJson",produces="application/json")
+    public UserBean exceptionForJson () {
         UserBean user= new UserBean();
         user.setUserName("gaojian");
         user.setAge(11);
-        return "123";
+        return user;
     }
 }
