@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.james.zs.dao.cluster.UserForClusterDao">
+
+    <select id="queryByUserId" resultType="com.james.zs.entity.cluster.UserDo" parameterType="long">
+        select id, userName, password
+        from user
+        where id = #{userId}
+    </select>
+
+    <insert id="insertUser" parameterType="com.james.zs.entity.cluster.UserDo">
+        insert into user(userName, password) values(#{userName}, #{password})
+    </insert>
+</mapper>
