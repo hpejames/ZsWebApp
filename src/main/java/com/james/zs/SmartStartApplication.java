@@ -15,8 +15,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  */
 @ComponentScan(basePackages={"com.james.zs.web.controller",
                              "com.james.zs.rest.controller",
-                             "com.james.zk.exception",
-                             "com.james.zs.config"}) // 扫描com.dahan包下所有spring相关组件
+                             "com.james.zs.exception",
+                             "com.james.zs.config",
+                             "com.james.zs.service.impl",
+                             "com.james.zs.dao"}) // 扫描com.dahan包下所有spring相关组件
 @SpringBootApplication // 加载Spring Boot组件
 @EnableScheduling // 计划任务执行
 public class SmartStartApplication extends SpringBootServletInitializer {

@@ -1,4 +1,4 @@
-package com.james.zk.exception;
+package com.james.zs.exception;
 
 import java.util.Map;
 

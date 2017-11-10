@@ -1,11 +1,11 @@
-package com.james.zk.exception;
+package com.james.zs.exception;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import java.sql.SQLException;
 
 /**
  * @description 捕获异常统一处理
@@ -15,20 +15,14 @@ import java.sql.SQLException;
  * @modify date
  * @version v1.0
  */
-@ControllerAdvice
-public class GlobalExceptionHandler {
+@RestControllerAdvice
+public class GlobalRestExceptionHandler {
 
     private final static String EXPTION_MSG_KEY = "message";
 
-
-
     @ExceptionHandler(Exception.class)
-    public ModelAndView handleBizExp(HttpServletRequest request, Exception ex){
+    public Exception handleBizExp(HttpServletRequest request, Exception ex){
 //        LOG.info("Business exception handler  " + ex.getMessage() );
-        System.out.println(request.getHeader("Accept"));
-        ModelAndView mv = new ModelAndView();
-        mv.addObject("message", ex.getMessage());
-        mv.setViewName("errorPage");
-        return mv;
+        return ex;
     }
 }

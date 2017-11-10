@@ -1,4 +1,4 @@
-package com.james.zk.exception;
+package com.james.zs.exception;
 
 /**
  * 业务异常
@@ -9,7 +9,7 @@ package com.james.zk.exception;
  * @modify date 8:40 2017/11/8
  * @version v1.0
  */
-public class BusinessException extends RuntimeException {
+public class RestBusinessException extends RuntimeException {
 
     /**
      * 业务类型
@@ -26,28 +26,28 @@ public class BusinessException extends RuntimeException {
      */
     private String message;
 
-    public BusinessException(String bizType, int bizCode, String message){
+    public RestBusinessException(String bizType, int bizCode, String message){
         super(message);
         this.bizType = bizType;
         this.bizCode = bizCode;
         this.message = message;
     }
 
-    public BusinessException(String message){
+    public RestBusinessException(String message){
         super(message);
         this.bizType = "";
         this.bizCode = -1;
         this.message = message;
     }
 
-    public BusinessException(String bizType, String message){
+    public RestBusinessException(String bizType, String message){
         super(message);
         this.bizType = bizType;
         this.bizCode = -1;
         this.message = message;
     }
 
-    public BusinessException(int bizCode, String message){
+    public RestBusinessException(int bizCode, String message){
         super(message);
         this.bizType = "";
         this.bizCode = bizCode;

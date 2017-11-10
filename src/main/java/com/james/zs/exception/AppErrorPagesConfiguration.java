@@ -1,4 +1,4 @@
-package com.james.zk.exception;
+package com.james.zs.exception;
 
 
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
