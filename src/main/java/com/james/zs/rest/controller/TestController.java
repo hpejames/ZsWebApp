@@ -51,7 +51,7 @@ public class TestController {
 
     @RequestMapping(value="/saveUser",produces="application/json")
     public String saveUser () {
-        userServiceImp.saveMasterUser();
+        userServiceImp.saveMasterAndClusterUser();
         return "succes";
     }
 }

@@ -18,11 +18,6 @@ public class IndexController {
         throw new NullPointerException("hello world!");
     }
 
-    @RequestMapping("/")
-    public String home(Model model) {
-        return "index";
-    }
-
     @RequestMapping("/error500")
     public void index() {
         int a = 1 / 0;

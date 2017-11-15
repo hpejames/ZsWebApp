@@ -1,5 +1,6 @@
 package com.james.zs.service.impl;
 
+import com.james.zs.config.database.MultiTransactional;
 import com.james.zs.dao.cluster.UserForClusterDao;
 import com.james.zs.dao.master.UserForMasterDao;
 import com.james.zs.entity.master.UserDo;
@@ -63,6 +64,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @MultiTransactional(values={"masterTransactionManager","clusterTransactionManager"})
     public void saveMasterAndClusterUser() {
         com.james.zs.entity.master.UserDo userMaster = new com.james.zs.entity.master.UserDo();
         userMaster.setUserName("userMaster");
@@ -73,5 +75,7 @@ public class UserServiceImpl implements UserService {
         userCluster.setUserName("userCluster");
         userCluster.setPassword("userCluster");
         userForClusterDao.insertUser(userCluster);
+
+        throw new NullPointerException();
     }
 }
